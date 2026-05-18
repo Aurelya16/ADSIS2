@@ -20,7 +20,7 @@ menggunakan Docker Compose untuk aplikasi Sistem Informasi Akademik.
 ## Cara Menjalankan
 
 ### 1. Clone repository
-git clone <URL_REPO>
+git clone https://github.com/Aurelya16/ADSIS2.git
 cd nusantara-tech
 
 ### 2. Setup environment
