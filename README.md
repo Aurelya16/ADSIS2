@@ -40,4 +40,25 @@ docker compose ps
 
 ## Bukti Pengujian
 
-(screenshot menyusul)
+### 1. Semua container hidup
+(screenshot docker compose ps)
+
+### 2. API tambah mahasiswa berhasil
+(screenshot curl POST)
+
+### 3. Data tersimpan di MySQL via phpMyAdmin
+(screenshot phpMyAdmin tabel mahasiswa)
+
+### 4. File upload masuk ke MinIO bucket
+(screenshot MinIO dashboard)
+
+## Cara Menggunakan API
+
+### Tambah mahasiswa
+curl -X POST http://100.71.232.23:3000/mahasiswa -H "Content-Type: application/json" -d '{"nama":"Nama","nim":"NIM"}'
+
+### Lihat semua mahasiswa
+curl http://100.71.232.23:3000/mahasiswa
+
+### Hapus mahasiswa
+curl -X DELETE http://100.71.232.23:3000/mahasiswa/1
