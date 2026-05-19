@@ -52,20 +52,20 @@ services:
     networks:
       - nusantara_net
 
-   phpmyadmin:
-     image: phpmyadmin:latest
-     container_name: nusantara_phpmyadmin
-     restart: always
-     ports:
-       - "8080:80"
-     environment:
-       PMA_HOST: db
-       PMA_USER: ${DB_USER}
-       PMA_PASSWORD: ${DB_PASSWORD}
-     depends_on:
-       - db
-     networks:
-       - nusantara_net
+  phpmyadmin:
+    image: phpmyadmin:5.2
+    container_name: nusantara_phpmyadmin
+    restart: always
+    ports:
+      - "8080:80"
+    environment:
+      PMA_HOST: db
+      PMA_USER: ${DB_USER}
+      PMA_PASSWORD: ${DB_PASSWORD}
+    depends_on:
+      - db
+    networks:
+      - nusantara_net
 
 volumes:
   db_data:
@@ -74,4 +74,3 @@ volumes:
 networks:
   nusantara_net:
     driver: bridge
-
