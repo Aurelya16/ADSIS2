@@ -41,16 +41,19 @@ docker compose ps
 ## Bukti Pengujian
 
 ### 1. Semua container hidup
-(screenshot docker compose ps)
+Screenshot docker compose ps menunjukkan 4 container berstatus Up
 
 ### 2. API tambah mahasiswa berhasil
-(screenshot curl POST)
+curl POST ke /mahasiswa mengembalikan response "Berhasil ditambahkan"
 
 ### 3. Data tersimpan di MySQL via phpMyAdmin
-(screenshot phpMyAdmin tabel mahasiswa)
+Tabel mahasiswa di akademik_db menampilkan data yang berhasil disimpan
 
 ### 4. File upload masuk ke MinIO bucket
-(screenshot MinIO dashboard)
+Bucket mahasiswa-files menampilkan file yang berhasil diupload
+
+### 5. Data tidak hilang setelah restart
+curl GET /mahasiswa setelah docker compose stop & start tetap menampilkan data
 
 ## Cara Menggunakan API
 
