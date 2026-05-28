@@ -53,7 +53,7 @@ services:
       - nusantara_net
 
   phpmyadmin:
-    image: phpmyadmin:5.2
+    image: phpmyadmin:latest
     container_name: nusantara_phpmyadmin
     restart: always
     ports:
